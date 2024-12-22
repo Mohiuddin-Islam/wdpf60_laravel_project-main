@@ -1,6 +1,13 @@
 import React from 'react'
+import { usePage } from "@inertiajs/react";
 
 export default function Features_area() {
+    const{doctors,specialists} = usePage().props;
+    const spname = (sid) => {
+    const sptype = specialists.find(abc => abc.find === sid);
+        return sptype ? sptype.name : 'Unknown';
+    };
+    
   return (
     <>
     
@@ -31,6 +38,8 @@ export default function Features_area() {
                             </div>
                         </div>
                         <div className="row">
+                            {/* Loop Start */}
+                            {doctors.map(({id, name, specialist_id, email,photo,status}) => (
                             <div className="col-xl-3 col-lg-3 col-md-6 col-12">
                                 <div
                                     className="rr-features-item p-relative wow rrfadeUp"
@@ -53,13 +62,11 @@ export default function Features_area() {
                                     <div className="rr-features-content text-center">
                                         <h3 className="rr-features-title">
                                             <a href="service-details.html">
-                                                Test-Bottle
+                                                {name}
                                             </a>
                                         </h3>
                                         <p>
-                                            Medical is the knowledge or master
-                                            event. Identify the error of the we
-                                            coding page speed.
+                                        {email}
                                         </p>
                                         <a
                                             className="rr-features-btn"
@@ -73,132 +80,9 @@ export default function Features_area() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-3 col-md-6 col-12">
-                                <div
-                                    className="rr-features-item p-relative wow rrfadeUp"
-                                    data-wow-duration=".9s"
-                                    data-wow-delay=".5s"
-                                >
-                                    <div className="rr-features-thumb p-relative">
-                                        <img
-                                            src="assets/img/feature/bg-img.png"
-                                            alt="img"
-                                        />
-                                        <span>02</span>
-                                    </div>
-                                    <div className="rr-features-icon">
-                                        <img
-                                            src="assets/img/feature/icon-2.png"
-                                            alt="img"
-                                        />
-                                    </div>
-                                    <div className="rr-features-content text-center">
-                                        <h3 className="rr-features-title">
-                                            <a href="service-details.html">
-                                                Chest Lungs
-                                            </a>
-                                        </h3>
-                                        <p>
-                                            Medical is the knowledge or master
-                                            event. Identify the error of the we
-                                            coding page speed.
-                                        </p>
-                                        <a
-                                            className="rr-features-btn"
-                                            href="service-details.html"
-                                        >
-                                            <span>
-                                                See More{" "}
-                                                <i className="fa-solid fa-angle-right"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-3 col-md-6 col-12">
-                                <div
-                                    className="rr-features-item p-relative wow rrfadeUp"
-                                    data-wow-duration=".9s"
-                                    data-wow-delay=".7s"
-                                >
-                                    <div className="rr-features-thumb p-relative">
-                                        <img
-                                            src="assets/img/feature/bg-img.png"
-                                            alt="img"
-                                        />
-                                        <span>03</span>
-                                    </div>
-                                    <div className="rr-features-icon">
-                                        <img
-                                            src="assets/img/feature/icon-3.png"
-                                            alt="img"
-                                        />
-                                    </div>
-                                    <div className="rr-features-content text-center">
-                                        <h3 className="rr-features-title">
-                                            <a href="service-details.html">
-                                                Test Laboratory
-                                            </a>
-                                        </h3>
-                                        <p>
-                                            Medical is the knowledge or master
-                                            event. Identify the error of the we
-                                            coding page speed.
-                                        </p>
-                                        <a
-                                            className="rr-features-btn"
-                                            href="service-details.html"
-                                        >
-                                            <span>
-                                                See More{" "}
-                                                <i className="fa-solid fa-angle-right"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-3 col-md-6 col-12">
-                                <div
-                                    className="rr-features-item p-relative wow rrfadeUp"
-                                    data-wow-duration=".9s"
-                                    data-wow-delay=".9s"
-                                >
-                                    <div className="rr-features-thumb p-relative">
-                                        <img
-                                            src="assets/img/feature/bg-img.png"
-                                            alt="img"
-                                        />
-                                        <span>04</span>
-                                    </div>
-                                    <div className="rr-features-icon">
-                                        <img
-                                            src="assets/img/feature/icon-4.png"
-                                            alt="img"
-                                        />
-                                    </div>
-                                    <div className="rr-features-content text-center">
-                                        <h3 className="rr-features-title">
-                                            <a href="service-details.html">
-                                                Team Support
-                                            </a>{" "}
-                                        </h3>
-                                        <p>
-                                            Medical is the knowledge or master
-                                            event. Identify the error of the we
-                                            coding page speed.
-                                        </p>
-                                        <a
-                                            className="rr-features-btn"
-                                            href="service-details.html"
-                                        >
-                                            <span>
-                                                See More{" "}
-                                                <i className="fa-solid fa-angle-right"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
+                            
+                            
                         </div>
                     </div>
                 </section>

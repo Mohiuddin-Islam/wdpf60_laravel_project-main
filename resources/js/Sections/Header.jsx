@@ -1,9 +1,13 @@
-import React from 'react'
+
+import { Link } from "@inertiajs/react";
+import React from "react";
+
 
 export default function Header() {
-  return (
-    <>
-    <div className="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
+    return (
+        <>
+            {/*<!-- header top area start -->*/}
+            <div className="rr-header-1-top rr-header-1-shap d-none d-xl-block grey-bg p-relative">
                 <div className="container custom-container-1 z-index-3">
                     <div className="rr-header-1-before">
                         <div className="row align-items-center">
@@ -11,12 +15,12 @@ export default function Header() {
                                 <div className="rr-header-1-top-info text-end">
                                     <ul className="d-flex align-items-center">
                                         <li>
-                                            <a href="mailto:support@gmail.com ">
+                                            <Link to="mailto:support@gmail.com ">
                                                 <span>
                                                     <i className="fa-solid fa-envelope"></i>
                                                 </span>
                                                 support@gmail.com{" "}
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="ml-50">
                                             <b>
@@ -37,12 +41,15 @@ export default function Header() {
                             <div className="col-xxl-4 col-xl-6 col-lg-5">
                                 <div className="rr-header-2-top-info d-flex align-items-center justify-content-end text-end">
                                     <div className="rr-header-2-lang rr-header-lang-main d-none d-md-block ml-60">
-                                        <select style={{display: 'none'}}>
+                                        <select style={{ display: "none" }}>
                                             <option>English</option>
                                             <option>Bangla</option>
                                             <option>French</option>
                                         </select>
-                                        <div className="nice-select" tabIndex="0">
+                                        <div
+                                            className="nice-select"
+                                            tabIndex="0"
+                                        >
                                             <span className="current">
                                                 <img
                                                     src="assets/img/header/avata.png"
@@ -79,6 +86,7 @@ export default function Header() {
                 </div>
             </div>
             {/*<!-- header top area end -->*/}
+
             {/*<!-- header main area start -->*/}
             <section className="rr-header-1-main d-none d-xl-block">
                 <div className="container custom-container-1">
@@ -89,29 +97,29 @@ export default function Header() {
                                     Follow Social:
                                 </h4>
                                 <div className="rr-header-1-social ml-20">
-                                    <a href="#">
+                                    <Link to="#">
                                         <i className="fa-brands fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link to="#">
                                         <i className="fa-brands fa-instagram"></i>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link to="#">
                                         <i className="fa-brands fa-pinterest-p"></i>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link to="#">
                                         <i className="fa-brands fa-twitter"></i>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-xl-4">
                             <div className="rr-herader-1-logo text-center">
-                                <a href="index.html">
+                                <Link to="index.html">
                                     <img
                                         src="assets/img/logo/logo-black.png"
                                         alt="img"
                                     />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-xl-4">
@@ -124,9 +132,9 @@ export default function Header() {
                                 <div className="rr-header-1-contat-text ml-20">
                                     <h4>Appointment Call</h4>
                                     <b>
-                                        <a href="tel:+99584554">
+                                        <Link to="tel:+99584554">
                                             24/7 – quick and easy
-                                        </a>
+                                        </Link>
                                     </b>
                                 </div>
                             </div>
@@ -135,6 +143,8 @@ export default function Header() {
                 </div>
             </section>
             {/*<!-- header main area end -->*/}
+
+            
             <header className="rr-header-height z-index-3">
                 {/*<!-- header area start -->*/}
                 <div id="header-sticky" className="rr-header-area">
@@ -150,196 +160,100 @@ export default function Header() {
                                 <div className="rr-header-main-menu rr-header-menu ml-30  d-none d-xl-block">
                                     <nav className="rr-main-menu-content">
                                         <ul>
-                                            <li className="has-dropdown">
-                                                <a href="index.html">Home</a>
-                                                <div className="rr-submenu submenu has-homemenu">
-                                                    <div className="row gx-6 row-cols-1 row-cols-md-2 row-cols-xl-4">
-                                                        <div className="col homemenu">
-                                                            <div className="homemenu-thumb mb-15">
-                                                                <img
-                                                                    src="assets/img/menu/home-1.jpg"
-                                                                    alt="img"
-                                                                />
-                                                                <div className="homemenu-btn">
-                                                                    <a
-                                                                        className="rr-menu-btn"
-                                                                        href="index.html"
-                                                                    >
-                                                                        Home 01
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div className="homemenu-content text-center">
-                                                                <h4 className="homemenu-title">
-                                                                    <a href="index.html">
-                                                                        Home 01
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col homemenu">
-                                                            <div className="homemenu-thumb mb-15">
-                                                                <img
-                                                                    src="assets/img/menu/home-2.jpg"
-                                                                    alt="img"
-                                                                />
-                                                                <div className="homemenu-btn">
-                                                                    <a
-                                                                        className="rr-menu-btn"
-                                                                        href="index-2.html"
-                                                                    >
-                                                                        Home 02
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div className="homemenu-content text-center">
-                                                                <h4 className="homemenu-title">
-                                                                    <a href="index-2.html">
-                                                                        Home 02
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col homemenu">
-                                                            <div className="homemenu-thumb mb-15">
-                                                                <img
-                                                                    src="assets/img/menu/home-3.jpg"
-                                                                    alt="img"
-                                                                />
-                                                                <div className="homemenu-btn">
-                                                                    <a
-                                                                        className="rr-menu-btn"
-                                                                        href="index-3.html"
-                                                                    >
-                                                                        Home 03
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div className="homemenu-content text-center">
-                                                                <h4 className="homemenu-title">
-                                                                    <a href="index-3.html">
-                                                                        Home 03
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col homemenu">
-                                                            <div className="homemenu-thumb mb-15">
-                                                                <img
-                                                                    src="assets/img/menu/home-4.jpg"
-                                                                    alt="img"
-                                                                />
-                                                                <div className="homemenu-btn">
-                                                                    <a
-                                                                        className="rr-menu-btn"
-                                                                        href="index-4.html"
-                                                                    >
-                                                                        Home 04
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div className="homemenu-content text-center">
-                                                                <h4 className="homemenu-title">
-                                                                    <a href="index-3.html">
-                                                                        Home 04
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <li className="">
+                                                <Link href={route('home')}>Home</Link>
                                             </li>
                                             <li>
-                                                <a href="about.html">
+                                                <Link href={route('about')}>
                                                     about us
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="has-dropdown">
-                                                <a href="service-details.html">
+                                                <Link to="service-details.html">
                                                     Service
-                                                </a>
+                                                </Link>
                                                 <ul className="submenu rr-submenu">
                                                     <li>
-                                                        <a href="service-details.html">
+                                                        <Link to="service-details.html">
                                                             Service
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="service-details.html">
+                                                        <Link to="service-details.html">
                                                             Service Details
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="has-dropdown">
-                                                <a href="#">Pages</a>
+                                                <Link to="#">Pages</Link>
                                                 <ul className="submenu rr-submenu">
                                                     <li>
-                                                        <a href="team.html">
+                                                        <Link to="team.html">
                                                             team
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="team-details.html">
+                                                        <Link to="team-details.html">
                                                             team details
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="pricing.html">
+                                                        <Link to="pricing.html">
                                                             pricing{" "}
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="project.html">
+                                                        <Link to="project.html">
                                                             project
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="project-details.html">
+                                                        <Link to="project-details.html">
                                                             project-details
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="doctors.html">
+                                                        <Link to="doctors.html">
                                                             doctors
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="doctor-details.html">
+                                                        <Link to="doctor-details.html">
                                                             doctors-details
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="404.html">
+                                                        <Link to="404.html">
                                                             error
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="has-dropdown">
-                                                <a href="blog.html">Blog</a>
+                                                <Link to="blog.html">Blog</Link>
                                                 <ul className="submenu rr-submenu">
                                                     <li>
-                                                        <a href="blog.html">
+                                                        <Link to="blog.html">
                                                             Blog Grid
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="blog-sidebar.html">
+                                                        <Link to="blog-sidebar.html">
                                                             Blog Standard
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="blog-details.html">
+                                                        <Link to="blog-details.html">
                                                             Blog Details
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="contact.html">
+                                                <Link href={route('contact')}>
                                                     Contact
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </nav>
@@ -353,15 +267,15 @@ export default function Header() {
                                         </button>
                                     </div>
                                     <div className="rr-header-1-contat d-none d-md-block ml-30">
-                                        <a
+                                        <Link
                                             className="rr-btn-border"
-                                            href="contact.html"
+                                            to="contact.html"
                                         >
                                             <span>
                                                 Make Appointment{" "}
                                                 <i className="fa-sharp fa-solid fa-plus"></i>
                                             </span>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="rr-header-bar d-xl-none">
                                         <button className="rr-menu-bar">
@@ -375,7 +289,6 @@ export default function Header() {
                 </div>
                 {/*<!-- header area end -->*/}
             </header>
-    
-    </>
-  )
+        </>
+    );
 }

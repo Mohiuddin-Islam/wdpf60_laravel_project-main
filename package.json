@@ -23,6 +23,7 @@
     "dependencies": {
         "@fortawesome/react-fontawesome": "^0.2.2",
         "bootstrap": "^4.6.2",
-        "font-awesome": "^4.7.0"
+        "font-awesome": "^4.7.0",
+        "react-router-dom": "^7.1.0"
     }
 }
