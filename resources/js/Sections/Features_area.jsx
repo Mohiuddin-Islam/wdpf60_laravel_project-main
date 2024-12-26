@@ -48,10 +48,10 @@ export default function Features_area() {
                                 >
                                     <div className="rr-features-thumb p-relative">
                                         <img
-                                            src="assets/img/feature/bg-img.png"
+                                            src={photo}
                                             alt="img"
                                         />
-                                        <span>01</span>
+                                        <span>{id}</span>
                                     </div>
                                     <div className="rr-features-icon">
                                         <img

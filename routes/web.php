@@ -47,6 +47,8 @@ use Inertia\Inertia;
 // Route::get('/', function () {
 //     return view('frontend.home');
 // });
+
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
@@ -55,6 +57,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('/appointment', [AppointmentController::class, 'create'])->name('front_app.create');
 Route::post('/appointment', [AppointmentController::class, 'store'])->name('front_app.store');
+
 // Admin Dashboard
 // Route::get('/admin/dashboard', function () {
 //     return view('backend.admin_dashboard');
